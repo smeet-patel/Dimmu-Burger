@@ -251,7 +251,7 @@ border-radius: 10px;
   .number-input {
     /* border: 2px solid #ddd; */
     padding-top: 5px;
-    background: red;
+    background-color:rgba(255, 0, 0, 0.8);
     border-radius: 10px;
     display: inline-flex;
   }
