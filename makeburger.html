@@ -1,424 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Basic Page Needs
+
+<head>
+	<!-- Basic Page Needs
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<meta charset="utf-8">
-		<title>Dimmu Burgers</title>
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<!-- Mobile Specific Metas
+	<meta charset="utf-8">
+	<title>Dimmu Burgers</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Mobile Specific Metas
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- CSS
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	 crossorigin="anonymous">
+	<!-- Favicon
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="images/DB.png">
+</head>
+
+<body>
+	<div class="nav1" id="mynav1">
+		<!--Adding My logo to the left and always showing -->
+		<a href="index.html"><img src="images/dimmulogo.png" height="42"></a>
+		<!--Floating to the Left Side of the menu, the other pages-->
+		<a href="makeburger.html">Order</a>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/skeleton.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-		<!-- Favicon
+		<!--Shows menubutton when screen is small -->
+		<a href="javascript:void(0);" style="font-size:15px;" class="menubutton" onclick="myFunction()">&#9776;</a>
+	</div>
+	<br>
+	<!-- Primary Page Layout
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link rel="icon" type="image/png" href="images/DB.png">
-	</head>
-	<body>
-		<div class="nav1" id="mynav1">
-			<!--Adding My logo to the left and always showing -->
-			<a href="index.html"><img src="images/dimmulogo.png" height="42"></a>
-			<!--Floating to the Left Side of the menu, the other pages-->
-			<a href="makeburger.html" >Order</a>
-			<link rel="stylesheet" href="css/normalize.css">
-			<link rel="stylesheet" href="css/skeleton.css">
-			<!--Shows menubutton when screen is small -->
-			<a href="javascript:void(0);" style="font-size:15px;" class="menubutton" onclick="myFunction()">&#9776;</a>
-		</div>
-		<br>
-		<!-- Primary Page Layout
-			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div class="sticky">
-			<!-- <div class="sticky"> -->
-			<table style="text-align:center;">
-				<Tr>
-					<!-- <Td class="sideProgress"><button class="btn" id="Back" href="https://www.google.com">&lt;</button></td> -->
-					<Td>
-						<ul id="progress-bar" class="progressbar">
-							<a href="#google">
-								<li class="active">Bread</li>
-							</a>
-							<li>Base Protein</li>
-							<li>Cheese</li>
-							<li>Vegetable</li>
-							<li>Sauce</li>
-						</ul>
+	<div class="sticky">
+		<!-- <div class="sticky"> -->
+		<table style="text-align:center;">
+			<Tr>
+				<!-- <Td class="sideProgress"><button class="btn" id="Back" href="https://www.google.com">&lt;</button></td> -->
+				<Td>
+					<ul id="progress-bar" class="progressbar">
+						<a href="#google">
+							<li class="active">Bread</li>
+						</a>
+						<li>Base Protein</li>
+						<li>Cheese</li>
+						<li>Vegetable</li>
+						<li>Sauce</li>
+					</ul>
+				</td>
+				<!-- <Td class="sideProgress"><a href="#google"><button class="btn" onclick="change()" id="Next">&gt;</button></a></td> -->
+			</tr>
+		</table>
+	</div>
+	<!-- </div> -->
+	<div class="containerWork">
+		<div id="mid">
+			<h1>ORDER BURGER</h1>
+			<!-- Bread
+			    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<h2 class="w">Bread</h2>
+			<table id="custom">
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/breads/bun.png" class="icon"></div>
 					</td>
-					<!-- <Td class="sideProgress"><a href="#google"><button class="btn" onclick="change()" id="Next">&gt;</button></a></td> -->
+					<td>
+						<div class="cen"><input type="radio" name="Bread" value="Burger" id="Next"> Burger</div>
+					</td>
+					<td>
+						<div class="cen">Price</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/breads/junior_bun.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen"><input type="radio" name="Bread" value="Jr Burger" id="Next"> Jr Burger</div>
+					</td>
+					<td>
+						<div class="cen">Price</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/breads/tortillas.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen"><input type="radio" name="Bread" value="Tortillas" id="Next"> Tortillas</div>
+					</td>
+					<td>
+						<div class="cen">Price</div>
+					</td>
 				</tr>
 			</table>
-		</div>
-		<!-- </div> -->
-		<div class="containerWork">
-			<div id="mid">
-				<h1>ORDER BURGER</h1>
-				<h2 class="w">Bread</h2>
-				<table id="custom">
-                        <tr>
-                                <td>
-                                    <div class="cen"><img src="ingredients_icons/breads/bun.png" class="icon"></div>
-                                </td>
-                                <td>
-                                    <div class="cen"><input type="radio" name="Bread" value="Burger" id="Next"> Burger</div>
-                                </td>
-                                <td>
-                                    <div class="cen">Price</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cen"><img src="ingredients_icons/breads/junior_bun.png" class="icon"></div>
-                                </td>
-                                <td>
-                                    <div class="cen"><input type="radio" name="Bread" value="Jr Burger" id="Next"> Jr Burger</div>
-                                </td>
-                                <td>
-                                    <div class="cen">Price</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cen"><img src="ingredients_icons/breads/tortillas.png" class="icon"></div>
-                                </td>
-                                <td>
-                                    <div class="cen"><input type="radio" name="Bread" value="Tortillas" id="Next"> Tortillas</div>
-                                </td>
-                                <td>
-                                    <div class="cen">Price</div>
-                                </td>
-                            </tr>
-					
-                </table>
-                <h2 class="w">Base Protein</h2>
-				<table id="custom">
-                <tr>
-                    <td>
-                        <div class="cen"><img src="ingredients_icons/bases/chicken.png" class="icon"></div>
-                    </td>
-                    <td>
-                        <div class="cen"><input type="radio" name="Base" value="Chicken" id="Next"> Chicken</div>
-                    </td>
-                    <td>
-                        <div class="cen">Price</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="cen"><img src="ingredients_icons/bases/meat.png" class="icon"></div>
-                    </td>
-                    <td>
-                        <div class="cen"><input type="radio" name="Base" value="Meat" id="Next"> Meat</div>
-                    </td>
-                    <td>
-                        <div class="cen">Price</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="cen"><img src="ingredients_icons/bases/falafel.png" class="icon"></div>
-                    </td>
-                    <td>
-                        <div class="cen"><input type="radio" name="Base" value="Falafel" id="Next"> Falafel</div>
-                    </td>
-                    <td>
-                        <div class="cen">Price</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="cen"><img src="ingredients_icons/bases/tofu.png" class="icon"></div>
-                    </td>
-                    <td>
-                        <div class="cen"><input type="radio" name="Base" value="Tofu" id="Next"> Tofu</div>
-                    </td>
-                    <td>
-                        <div class="cen">Price</div>
-                    </td>
-                </tr>
-                </table>
-                
-                <h2 class="w">Cheese</h2>
-				<table id="custom">
-                <tr>
-                    <td>
-                        <div class="cen"><img src="ingredients_icons/cheeses/cheese.png" class="icon"></div>
-                    </td>
-                    <td>
-                        <div class="cen">Cheddar</div>
-                    </td>
-                    <td>
-                            <div class="cen"><div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                    <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                </div></div>
-                    </td>
-                </tr>
-                <tr>
-                        <td>
-                            <div class="cen"><img src="ingredients_icons/cheeses/cheese (1).png" class="icon"></div>
-                        </td>
-                        <td>
-                            <div class="cen">Swiss</div>
-                        </td>
-                        <td>
-                                <div class="cen"><div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                    <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                </div></div>
-                        </td>
-                    </tr>
-                
-                    <tr>
-                            <td>
-                                <div class="cen"><img src="ingredients_icons/cheeses/halloumi.png" class="icon"></div>
-                            </td>
-                            <td>
-                                <div class="cen">Halloumi</div>
-                            </td>
-                            <td>
-                                    <div class="cen"><div class="number-input">
-                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                            <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                        </div></div>
-                            </td>
-                        </tr>
-                        <tr>
-                                <td>
-                                    <div class="cen"><img src="ingredients_icons/cheeses/paneer.jpg" class="icon"></div>
-                                </td>
-                                <td>
-                                    <div class="cen">Paneer</div>
-                                </td>
-                                <td>
-                                        <div class="cen"><div class="number-input">
-                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                                <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                            </div></div>
-                                </td>
-                            </tr>
-                </table>
+			<!-- Base Protein
+			    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<h2 class="w">Base Protein</h2>
+			<table id="custom">
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/bases/chicken.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen"><input type="radio" name="Base" value="Chicken" id="Next"> Chicken</div>
+					</td>
+					<td>
+						<div class="cen">Price</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/bases/meat.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen"><input type="radio" name="Base" value="Meat" id="Next"> Meat</div>
+					</td>
+					<td>
+						<div class="cen">Price</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/bases/falafel.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen"><input type="radio" name="Base" value="Falafel" id="Next"> Falafel</div>
+					</td>
+					<td>
+						<div class="cen">Price</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/bases/tofu.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen"><input type="radio" name="Base" value="Tofu" id="Next"> Tofu</div>
+					</td>
+					<td>
+						<div class="cen">Price</div>
+					</td>
+				</tr>
+			</table>
+			<h2 class="w">Cheese</h2>
+			<table id="custom">
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/cheeses/cheese.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Cheddar</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/cheeses/cheese (1).png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Swiss</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/cheeses/halloumi.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Halloumi</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/cheeses/paneer.jpg" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Paneer</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<table id="custom">
+				<tr>
+					<td style="color:red">Total</td>
+					<td>Quantity</td>
+					<td>Price</td>
+				</tr>
+			</table>
+			<!-- Vegetable
+			    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<h2 class="w">Vegetable</h2>
+			<table id="custom">
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Tomato</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/lettuce.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Lettuce</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/capsicum.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Capsicum</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/onion.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Onion</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/extras/pineapple.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Pineapple</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/carrot.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Carrot</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/extras/avocado.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Avocado</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/extras/pineapple.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Pickles</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<table id="custom">
+				<tr>
+					<td style="color:red">Total</td>
+					<td>Quantity</td>
+					<td>Price</td>
+				</tr>
+			</table>
+			<!-- Sauce
+			    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<h2 class="w">Sauce</h2>
+			<table id="custom">
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Mayonnaise</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Curry</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Italian Dressing</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+					</td>
+					<td>
+						<div class="cen">Hot Chilli</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="Hov">
+					<td>
+						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+					</td>
+					<td>
 
-                <h2 class="w">Vegetable</h2>
-				<table id="custom">
-                <tr>
-                    <td>
-                        <div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-                    </td>
-                    <td>
-                        <div class="cen">Tomato</div>
-                    </td>
-                    <td>
-                            <div class="cen"><div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                    <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                </div></div>
-                    </td>
-                </tr>
-                <tr>
-                        <td>
-                            <div class="cen"><img src="ingredients_icons/produce/lettuce.png" class="icon"></div>
-                        </td>
-                        <td>
-                            <div class="cen">Lettuce</div>
-                        </td>
-                        <td>
-                                <div class="cen"><div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                    <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                </div></div>
-                        </td>
-                    </tr>
-                
-                    <tr>
-                            <td>
-                                <div class="cen"><img src="ingredients_icons/produce/capsicum.png" class="icon"></div>
-                            </td>
-                            <td>
-                                <div class="cen">Capsicum</div>
-                            </td>
-                            <td>
-                                    <div class="cen"><div class="number-input">
-                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                            <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                        </div></div>
-                            </td>
-                        </tr>
-                        <tr>
-                                <td>
-                                    <div class="cen"><img src="ingredients_icons/produce/onion.png" class="icon"></div>
-                                </td>
-                                <td>
-                                    <div class="cen">Onion</div>
-                                </td>
-                                <td>
-                                        <div class="cen"><div class="number-input">
-                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                                <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                            </div></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                    <td>
-                                        <div class="cen"><img src="ingredients_icons/extras/pineapple.png" class="icon"></div>
-                                    </td>
-                                    <td>
-                                        <div class="cen">Pineapple</div>
-                                    </td>
-                                    <td>
-                                            <div class="cen"><div class="number-input">
-                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                                    <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                                </div></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                        <td>
-                                            <div class="cen"><img src="ingredients_icons/produce/carrot.png" class="icon"></div>
-                                        </td>
-                                        <td>
-                                            <div class="cen">Carrot</div>
-                                        </td>
-                                        <td>
-                                                <div class="cen"><div class="number-input">
-                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                                        <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                                    </div></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                            <td>
-                                                <div class="cen"><img src="ingredients_icons/extras/avocado.png" class="icon"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cen">Avocado</div>
-                                            </td>
-                                            <td>
-                                                    <div class="cen"><div class="number-input">
-                                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                                            <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                                        </div></div>
-                                            </td>
-                                        </tr>
-                                    <tr>
-                                            <td>
-                                                <div class="cen"><img src="ingredients_icons/extras/pineapple.png" class="icon"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cen">Pickles</div>
-                                            </td>
-                                            <td>
-                                                    <div class="cen"><div class="number-input">
-                                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                                            <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                                        </div></div>
-                                            </td>
-                                        </tr>
-                </table>
-                <h2 class="w">Sauce</h2>
-				<table id="custom">
-                <tr>
-                    <td>
-                        <div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-                    </td>
-                    <td>
-                        <div class="cen">Mayonnaise</div>
-                    </td>
-                    <td>
-                            <div class="cen"><div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                    <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                </div></div>
-                    </td>
-                </tr>
-                <tr>
-                        <td>
-                            <div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-                        </td>
-                        <td>
-                            <div class="cen">Curry</div>
-                        </td>
-                        <td>
-                                <div class="cen"><div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                    <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                </div></div>
-                        </td>
-                    </tr>
-                
-                    <tr>
-                            <td>
-                                <div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-                            </td>
-                            <td>
-                                <div class="cen">Italian Dressing</div>
-                            </td>
-                            <td>
-                                    <div class="cen"><div class="number-input">
-                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                            <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                        </div></div>
-                            </td>
-                        </tr>
-                        <tr>
-                                <td>
-                                    <div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-                                </td>
-                                <td>
-                                    <div class="cen">Hot Chilli</div>
-                                </td>
-                                <td>
-                                        <div class="cen"><div class="number-input">
-                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                                <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                            </div></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                    <td>
-                                        <div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-                                    </td>
-                                    <td>
-                                        <div class="cen">Aioli</div>
-                                    </td>
-                                    <td>
-                                            <div class="cen"><div class="number-input">
-                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                                                    <input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                                </div></div>
-                                    </td>
-                                </tr>
-                </table>
+						<div class="cen">Aioli</div>
+					</td>
+					<td>
+						<div class="cen">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<table id="custom">
+				<tr>
+					<td style="color:red">Total</td>
+					<td>Quantity</td>
+					<td>Price</td>
+				</tr>
+			</table>
+			<br>
+			<table id="custom noHov">
+					<tr>
+						<td><div class="cen"><button class="btnSub" id="Order">Proceed with order</button></div></td>
+					</tr>
+					<tr>
+						<td><div class="cen"><button class="btnSub" id="Another">Order Another Burger</button></div></td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	</div>
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+	<script src="javascript/script.js"></script>
+</body>
 
-			</div>
-		</div>
-	
-		</div>
-		</div>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
-		<script  src="javascript/script.js"></script>
-	</body>
 </html>
