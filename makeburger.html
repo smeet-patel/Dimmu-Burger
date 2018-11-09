@@ -28,7 +28,7 @@
 		<!--Adding My logo to the left and always showing -->
 		<a href="index.html"><img src="images/dimmulogo.png" height="42"></a>
 		<!--Floating to the Left Side of the menu, the other pages-->
-		<a href="makeburger.html">Order</a>
+		<a href="submit.php">Order</a>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/skeleton.css">
 		<!--Shows menubutton when screen is small -->
@@ -457,14 +457,20 @@
 					<td>
 						<div class="cen">
 							<div class="number-input">
-								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
-								<input class="quantity" min="0" max="3" name="quantity" value="0" type="number">
-								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+									<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+									<input type="number" name="tomato" value="0" class="quantity" min="0" max="3" onchange="myFunction(this.value)">
+									<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
 							</div>
 						</div>
 					</td>
 				</tr>
 			</table>
+			<p id="demo">hello</p>
+			<script>
+					function myFunction(val) {
+						alert("The input value has changed. The new value is: " + val);
+					}
+					</script>
 			<table id="custom">
 				<tr>
 					<td style="color:red">Total</td>
@@ -474,13 +480,17 @@
 			</table>
 			<br>
 			<table id="custom noHov">
-					<tr>
-						<td><div class="cen"><button class="btnSub" id="Order">Proceed with order</button></div></td>
-					</tr>
-					<tr>
-						<td><div class="cen"><button class="btnSub" id="Another">Order Another Burger</button></div></td>
-					</tr>
-				</table>
+				<tr>
+					<td>
+						<div class="cen"><button class="btnSub" id="Order">Proceed with order</button></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="cen"><button class="btnSub" id="Another">Order Another Burger</button></div>
+					</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 	</div>
