@@ -142,7 +142,7 @@ table {
 
 td {
     text-align: center;
-    font-size: 3vw;
+    font-size:calc(12px + 1.5vw);
     margin-left: auto;
     margin-right: auto;
 }
@@ -227,10 +227,10 @@ th {
 .progressbar li.active:before {
     border-color: red;
     background-color: red;
-    font-family: "Font Awesome 5 Free";
     color: white;
     top: -50px;
-    content: "\f058";
+    /* font-family: "Font Awesome 5 Free";
+    content: "\f058"; */
     transition: all .8s;
 }
 
@@ -278,71 +278,41 @@ th {
     color: white;
   }
 /* ------------ NAV BAR CODE ENDS ------------ */
-input[type="number"] {
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    appearance: textfield;
+
+.slidecontainer {
+    width: 100%;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+.slider {
     -webkit-appearance: none;
-    color: white;
-}
-
-.number-input {
-    /* border: 2px solid #ddd; */
-    padding-top: 5px;
-    margin-bottom: 1vw;
-    background-color: rgba(255, 0, 0, 0.8);
-    border-radius: 10px;
-    display: inline-flex;
-}
-
-.number-input,
-.number-input * {
-    box-sizing: border-box;
-    max-height: 40px;
-    /* max-width: 140px; */
-}
-
-.number-input button {
-    max-width: 40px;
+    width: 10%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
     outline: none;
+    opacity: 0.6;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: transparent;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: red;
     cursor: pointer;
-    margin: 0;
-    position: relative;
 }
 
-.number-input button:before,
-.number-input button:after {
-    display: inline-block;
-    position: absolute;
-    content: '';
-    width: 1rem;
-    height: 2px;
-    background-color: #212121;
-    transform: translate(-50%, -50%);
-    background-color: white;
-}
-
-.number-input button.plus:after {
-    transform: translate(-50%, -50%) rotate(90deg);
-    background-color: white;
-}
-
-.number-input input[type=number] {
-    font-family: sans-serif;
-    max-width: 4rem;
-    border: solid #ddd;
-    font-size: 2rem;
-    height: 3rem;
-    font-weight: bold;
-    text-align: center;
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
 }

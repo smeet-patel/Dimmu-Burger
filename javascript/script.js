@@ -47,15 +47,11 @@ var progressBar = {
     progressBar.Reset();
   })
 
-  (function () {
 
-    var wall = new Wall('#wall');
-    console.log(wall);
   
-    document.getElementById('Back').addEventListener('click', function () { wall.prevSection(); });
-    document.getElementById('Next').addEventListener('click', function () { wall.nextSection(); });
-    document.querySelector('.prev-slide').addEventListener('click', function () { wall.prevSlide(); });
-    document.querySelector('.next-slide').addEventListener('click', function () { wall.nextSlide(); });
-  }());
-  
- 
+var slider = document.getElementById("comment");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
