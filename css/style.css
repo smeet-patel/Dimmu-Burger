@@ -16,6 +16,10 @@ body {
     src: url("../melancholy/Melancholy-PersonalUse.ttf");
 }
 
+#che, #swi, #hal,#pan, #Tomato,#Lettuce, #Capsicum, #Onion,#Carrot,#Pineapple,#Avocado,#Pickles{
+    color: #ff8800;
+}
+
 
 .w {
     color: white;
@@ -462,5 +466,5 @@ th {
     background: #ff8800;
     cursor: pointer;
 
-
+}
 /* ------------------------------------*/

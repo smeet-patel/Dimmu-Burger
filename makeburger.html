@@ -42,7 +42,7 @@
 		<table style="text-align:center;">
 			<Tr>
 				<!-- <Td class="sideProgress"><button class="btn" id="Back" href="https://www.google.com">&lt;</button></td> -->
-				<Td>
+				<td>
 					<ul id="progress-bar" class="progressbar">
 						<a href="#google">
 							<li class="active">Bread</li>
@@ -53,6 +53,7 @@
 						<li>Sauce</li>
 					</ul>
 				</td>
+				<tr><td><div class="cen">Total Price <span id="totalPrice"></span> </div></td></tr>
 				<!-- <Td class="sideProgress"><a href="#google"><button class="btn" onclick="change()" id="Next">&gt;</button></a></td> -->
 			</tr>
 		</table>
@@ -72,12 +73,12 @@
 					<td>
 						<div class="cenform">
 							<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Burger
-								<input type="radio" name="Bread" value="">
+								<input type="radio" name="Bread" value="" onclick="mybread()" id="radio1">
 								<span class="checkradio"></span>
 							</label>
 						</div>
 					</td>
-					<td width="25%">Price</td>
+					<td width="25%"><span id="pbur"></span></td>
 				</tr>
 				<tr id="Hov">
 					<td width="15%">
@@ -86,12 +87,12 @@
 					<td>
 						<div class="cenform">
 							<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);"> Jr Burger
-								<input type="radio" name="Bread" value="">
+								<input type="radio" name="Bread" value="" onclick="mybread()" id="radio2">
 								<span class="checkradio"></span>
 							</label>
 						</div>
 					</td>
-					<td width="25%">Price</td>
+					<td width="25%"><span id="pjrbur"></span></td>
 				</tr>
 				<tr id="Hov">
 					<td width="15%">
@@ -100,12 +101,12 @@
 					<td>
 						<div class="cenform">
 							<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Tortillas
-								<input type="radio" name="Bread" value="">
+								<input type="radio" name="Bread" value="" onclick="mybread()" id="radio3">
 								<span class="checkradio"></span>
 							</label>
 						</div>
 					</td>
-					<td width="25%">Price</td>
+					<td width="25%"><span id="pwra"></span></td>
 				</tr>
 			</table>
 			<!-- Base Protein
@@ -156,7 +157,7 @@
 				</tr>
 				<tr id="Hov">
 					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/bases/falafel.png" class="icon"></div>
+						<div class="cen"><img src="ingredients_icons/bases/tofu.png" class="icon"></div>
 					</td>
 					<td>
 						<div class="cenform">
@@ -180,14 +181,14 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="2" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="2" value="0" class="slider" id="myche" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Cheddar <span id="demo"></span> </div>
+						<div class="cen">Cheddar <span id="che"></span> </div>
 					</td>
-					<td width="25%">price</td>
+					<td width="25%">$<span id="pche"></span></td>
 				</tr>
 				<tr id="Hov">
 					<td width="15%">
@@ -196,14 +197,14 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="2" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="2" value="0" class="slider" id="myswi" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Swiss <span id="demo"></span> </div>
+						<div class="cen">Swiss <span id="swi"></span> </div>
 					</td>
-					<td width="25%">price</td>
+					<td width="25%">$<span id="pswi"></span></td>
 				</tr>
 				<tr id="Hov">
 					<td width="15%">
@@ -212,14 +213,14 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="2" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="2" value="0" class="slider" id="myhal" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Halloumi <span id="demo"></span> </div>
+						<div class="cen">Halloumi <span id="hal"></span> </div>
 					</td>
-					<td width="25%">price</td>
+					<td width="25%">$<span id="phal"></span></td>
 				</tr>
 				<tr id="Hov">
 					<td width="15%">
@@ -228,14 +229,14 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="2" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="2" value="0" class="slider" id="mypan" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Paneer <span id="demo"></span> </div>
+						<div class="cen">Paneer <span id="pan"></span> </div>
 					</td>
-					<td width="25%">price</td>
+					<td width="25%">$<span id="ppan"></span></td>
 				</tr>
 			</table>
 			<!-- Vegetable
@@ -249,12 +250,12 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="3" value="0" class="slider" id="myTomato" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Tomato <span id="demo"></span> </div>
+						<div class="cen">Tomato <span id="Tomato"></span> </div>
 					</td>
 					<td width="25%">price</td>
 				</tr>
@@ -265,12 +266,12 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="3" value="0" class="slider" id="myLettuce" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Lettuce <span id="demo"></span> </div>
+						<div class="cen">Lettuce <span id="Lettuce"></span> </div>
 					</td>
 					<td width="25%">price</td>
 				</tr>
@@ -281,12 +282,12 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="3" value="0" class="slider" id="myCapsicum" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Capsicum <span id="demo"></span> </div>
+						<div class="cen">Capsicum <span id="Capsicum"></span> </div>
 					</td>
 					<td width="25%">price</td>
 				</tr>
@@ -297,12 +298,12 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="3" value="0" class="slider" id="myOnion" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Onion <span id="demo"></span> </div>
+						<div class="cen">Onion <span id="Onion"></span> </div>
 					</td>
 					<td width="25%">price</td>
 				</tr>
@@ -313,12 +314,12 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="3" value="0" class="slider" id="myCarrot" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Carrot <span id="demo"></span> </div>
+						<div class="cen">Carrot <span id="Carrot"></span> </div>
 					</td>
 					<td width="25%">price</td>
 				</tr>
@@ -329,12 +330,12 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="3" value="0" class="slider" id="myPineapple" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Pineapple <span id="demo"></span> </div>
+						<div class="cen">Pineapple <span id="Pineapple"></span> </div>
 					</td>
 					<td width="25%">price</td>
 				</tr>
@@ -345,12 +346,12 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="3" value="0" class="slider" id="myAvocado" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Avocado <span id="demo"></span> </div>
+						<div class="cen">Avocado <span id="Avocado"></span> </div>
 					</td>
 					<td width="25%">price</td>
 				</tr>
@@ -361,12 +362,12 @@
 					<td width="30%">
 						<div class="cen">
 							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myRange" name="comment">
+								<input type="range" min="0" max="3" value="0" class="slider" id="myPickles" name="comment">
 							</div>
 						</div>
 					</td>
 					<td width="30%">
-						<div class="cen">Pickles <span id="demo"></span> </div>
+						<div class="cen">Pickles <span id="Pickles"></span> </div>
 					</td>
 					<td width="25%">price</td>
 				</tr>
@@ -382,12 +383,12 @@
 					<td>
 						<div class="cenform">
 							<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Mayonnaise
-								<input type="checkbox" name="" value="">
+								<input type="checkbox" name="" value="" onclick="mayoT()" id="mayo">
 								<span class="checkmark"></span>
 							</label>
 						</div>
 					</td>
-					<td width="25%">Price</td>
+					<td width="25%"><span id="pmayo"></span></td>
 				</tr>
 				<tr id="Hov">
 					<td width="15%">
