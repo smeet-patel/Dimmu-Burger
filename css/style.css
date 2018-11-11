@@ -189,6 +189,16 @@ th {
     text-align: center;
 }
 
+.totalrow{
+    float: left;
+    margin-left:6%; 
+    font-size:calc(8px + 1.5vw);
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff8800;
+}
+
 /* tr:nth-child(even) :nth-child(odd) {
     background:rgba(100,255,50,0.3);
     }
@@ -243,8 +253,8 @@ th {
 }
 
 .progressbar li.active:before {
-    border-color: red;
-    background-color: red;
+    border-color: #ff8800;;
+    background-color: #ff8800;;
     color: white;
     top: -50px;
     /* font-family: "Font Awesome 5 Free";
@@ -253,7 +263,7 @@ th {
 }
 
 .progressbar li.active:after {
-    background-color: red;
+    background-color: #ff8800;
     transition: all .8s;
 }
 
@@ -286,6 +296,19 @@ th {
     color: red;
     border-color: red;
     font-size: 3vw;
+    margin: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    /* color: white; */
+  }
+
+  .btnSub1 {
+    /* background-color: red; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+    border-color: red;
+    font-size:calc(12px + 1.5vw);
     margin: 5px;
     padding-left: 1em;
     padding-right: 1em;
