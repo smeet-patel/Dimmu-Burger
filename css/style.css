@@ -16,6 +16,7 @@ body {
     src: url("../melancholy/Melancholy-PersonalUse.ttf");
 }
 
+
 .w {
     color: white;
     background-color: rgba(255, 0, 0, 0.8);
@@ -58,13 +59,12 @@ h1 {
 .nav1 {
     overflow: hidden;
     background-color: rgba(255, 0, 0, 0.6);
-    font-family: "Times New Roman", Times, serif;
 }
 
 /* The nav bar from portfoilo */
 .nav1 a:not(:first-child) {
     float: right;
-    padding: 20px 23px;
+    padding: 18px 23px;
 
 }
 
@@ -80,7 +80,7 @@ h1 {
     color: red;
     background-color: white;
     text-align: center;
-    padding: 10px 31px;
+    padding: 9.5px 31px;
     text-decoration: none;
     font-size: 20px;
 }
@@ -113,11 +113,23 @@ h1 {
     .nav1.responsive {
         position: relative;
     }
+/* Styling Nav bar text */
+.nav1 a {
+    float: left;
+    display: block;
+    color: red;
+    background-color: white;
+    text-align: center;
+    padding: 6px 31px;
+    text-decoration: none;
+    font-size: 18px;
+}
 
     .nav1.responsive .menubutton {
         position: absolute;
         right: 0;
         top: 0;
+        font-size: 40px;
     }
 
     .nav1.responsive a {
@@ -138,6 +150,7 @@ table {
     margin: 0;
     border-radius: 10px;
     text-align: center;
+    /* border: 1px solid black; */
 }
 
 td {
@@ -145,6 +158,7 @@ td {
     font-size:calc(12px + 1.5vw);
     margin-left: auto;
     margin-right: auto;
+    /* border: 1px solid black; */
 }
 
 .cen {
@@ -279,24 +293,156 @@ th {
   }
 /* ------------ NAV BAR CODE ENDS ------------ */
 
-.slidecontainer {
-    width: 100%;
+/* The container */
+.conradio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
+/* Hide the browser's default radio button */
+.conradio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkradio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #FFD37B;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.conradio:hover input ~ .checkradio {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.conradio input:checked ~ .checkradio {
+    background-color: #ff8800;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkradio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.conradio input:checked ~ .checkradio:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.conradio .checkradio:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*------------------------------------------*/
+
+.cenform{
+    margin-left: calc(10% + 1.5vw);
+    margin-right: auto;
+}
+.conform {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.conform input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    left: 0;
+    top:calc(5px + 1.5vw);
+    top: 5px;
+    border-radius: 10px;
+    height: 25px;
+    width: 25px;
+    background-color: #FFD37B;
+}
+
+/* On mouse-over, add a grey background color */
+.conform:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.conform input:checked ~ .checkmark {
+    background-color: #ff8800;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.conform input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.conform .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* ------------ NAV BAR CODE ENDS ------------ */
 .slider {
     -webkit-appearance: none;
-    width: 10%;
-    height: 10px;
-    border-radius: 5px;
+    width: 80%;
+    height: 15px;
+    border-radius: 5px;   
     background: #d3d3d3;
     outline: none;
-    opacity: 0.6;
+    opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-}
-
-.slider:hover {
-    opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
@@ -304,8 +450,8 @@ th {
     appearance: none;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
-    background: red;
+    border-radius: 50%; 
+    background: #ff8800;
     cursor: pointer;
 }
 
@@ -313,6 +459,8 @@ th {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: red;
+    background: #ff8800;
     cursor: pointer;
-}
+
+
+/* ------------------------------------*/

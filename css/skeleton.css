@@ -269,7 +269,6 @@ textarea:focus,
 select:focus {
   border: 1px solid #33C3F0;
   outline: 0; }
-label,
 legend {
   display: block;
   margin-bottom: .5rem;
@@ -326,7 +325,7 @@ pre > code {
 th,
 td {
   /* padding: 5px 15px; */
-  text-align: center;
+  /* text-align: center; */
   border-bottom: 1px solid #E1E1E1; }
 th:first-child,
 td:first-child {
