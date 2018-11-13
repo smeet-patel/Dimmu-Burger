@@ -35,7 +35,7 @@ aside,
 details,
 figcaption,
 figure,
-footer,
+/* footer, */
 header,
 hgroup,
 main,
@@ -250,7 +250,7 @@ samp {
  */
 
 button,
-input,
+/* input, */
 optgroup,
 select,
 textarea {
@@ -290,7 +290,8 @@ select {
 button,
 html input[type="button"], /* 1 */
 input[type="reset"],
-input[type="submit"] {
+/* input[type="submit"]  */
+{
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
 }

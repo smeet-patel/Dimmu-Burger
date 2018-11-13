@@ -13,8 +13,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- CSS
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<!-- <link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/skeleton.css"> -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
 	 crossorigin="anonymous">
@@ -29,8 +29,6 @@
 		<a href="index.html"><img src="images/dimmulogo.png" height="40"></a>
 		<!--Floating to the Left Side of the menu, the other pages-->
 		<a href="submit.php">Order</a>
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/skeleton.css">
 		<!--Shows menubutton when screen is small -->
 		<a href="javascript:void(0);" style="font-size:15px;" class="menubutton" onclick="myFunction()">&#9776;</a>
 	</div>
@@ -45,18 +43,22 @@
 				<td>
 					<ul id="progress-bar" class="progressbar">
 						<!-- <a href="#bread"> -->
-							<li class="active">Bread</li>
+						<li class="active">Bread</li>
 						<!-- </a> -->
 						<!-- <a href="#base1"> -->
-							<li>Base</li>
+						<li>Base</li>
 						<!-- </a> -->
 						<li>Cheese</li>
 						<li>Vegetable</li>
 						<li>Sauce</li>
 					</ul>
 				</td>
-				<tr><td class="totalrow"><div class="cen">Total Price <span id="totalPrice"></span></div></td></tr>
-				<!-- <Td class="sideProgress"><a href="#google"><button class="btn" onclick="change()" id="Next">&gt;</button></a></td> -->
+			<tr>
+				<td class="totalrow">
+					<div class="cen">Total Price <span id="totalPrice"></span></div>
+				</td>
+			</tr>
+			<!-- <Td class="sideProgress"><a href="#google"><button class="btn" onclick="change()" id="Next">&gt;</button></a></td> -->
 			</tr>
 		</table>
 	</div>
@@ -115,354 +117,357 @@
 			    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 			<div id="baseshow" style="display: none">
 				<h2 class="w">Base Protein</h2>
-			<table id="custom">
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/bases/chicken.png" class="icon"></div>
-					</td>
-					<td>
-						<div class="cenform">
-							<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Chicken
-								<input type="radio" name="Base" value="" onclick="mybase()" id="radio4">
-								<span class="checkradio"></span>
-							</label>
-						</div>
-					</td>
-					<td width="25%"><span id="pchi"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/bases/meat.png" class="icon"></div>
-					</td>
-					<td>
-						<div class="cenform">
-							<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Meat
-								<input type="radio" name="Base" value="" onclick="mybase()" id="radio5">
-								<span class="checkradio"></span>
-							</label>
-						</div>
-					</td>
-					<td width="25%"><span id="pmea"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/bases/falafel.png" class="icon"></div>
-					</td>
-					<td>
-						<div class="cenform">
-							<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Falafel
-								<input type="radio" name="Base" value="" onclick="mybase()" id="radio6">
-								<span class="checkradio"></span>
-							</label>
-						</div>
-					</td>
-					<td width="25%"><span id="pfal"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/bases/tofu.png" class="icon"></div>
-					</td>
-					<td>
-						<div class="cenform">
-							<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Vege Tofu
-								<input type="radio" name="Base" value="" onclick="mybase()" id="radio7">
-								<span class="checkradio"></span>
-							</label>
-						</div>
-					</td>
-					<td width="25%"><span id="ptof"></span></td>
-				</tr>
-			</table>
-			<button class="btnSub1" onclick="skipbase()">Skip</button><hr>
+				<table id="custom">
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/bases/chicken.png" class="icon"></div>
+						</td>
+						<td>
+							<div class="cenform">
+								<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Chicken
+									<input type="radio" name="Base" value="" onclick="mybase()" id="radio4">
+									<span class="checkradio"></span>
+								</label>
+							</div>
+						</td>
+						<td width="25%"><span id="pchi"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/bases/meat.png" class="icon"></div>
+						</td>
+						<td>
+							<div class="cenform">
+								<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Meat
+									<input type="radio" name="Base" value="" onclick="mybase()" id="radio5">
+									<span class="checkradio"></span>
+								</label>
+							</div>
+						</td>
+						<td width="25%"><span id="pmea"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/bases/falafel.png" class="icon"></div>
+						</td>
+						<td>
+							<div class="cenform">
+								<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Falafel
+									<input type="radio" name="Base" value="" onclick="mybase()" id="radio6">
+									<span class="checkradio"></span>
+								</label>
+							</div>
+						</td>
+						<td width="25%"><span id="pfal"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/bases/tofu.png" class="icon"></div>
+						</td>
+						<td>
+							<div class="cenform">
+								<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Vege Tofu
+									<input type="radio" name="Base" value="" onclick="mybase()" id="radio7">
+									<span class="checkradio"></span>
+								</label>
+							</div>
+						</td>
+						<td width="25%"><span id="ptof"></span></td>
+					</tr>
+				</table>
+				<button class="btnSub1" onclick="skipbase()">Skip</button>
+				<hr>
 			</div>
 			<!-- Cheese
 				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div id="cheeseshow" style="display: none">
-			<h2 class="w">Cheese</h2>
-			<table id="custom">
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/cheeses/cheese.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="2" value="0" class="slider" id="myche" name="comment">
+			<div id="cheeseshow" style="display: none">
+				<h2 class="w">Cheese</h2>
+				<table id="custom">
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/cheeses/cheese.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="2" value="0" class="slider" id="myche" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Cheddar <span id="che"></span> </div>
-					</td>
-					<td width="25%"><span id="pche"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/cheeses/cheese (1).png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="2" value="0" class="slider" id="myswi" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Cheddar <span id="che"></span> </div>
+						</td>
+						<td width="25%"><span id="pche"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/cheeses/cheese (1).png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="2" value="0" class="slider" id="myswi" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Swiss <span id="swi"></span> </div>
-					</td>
-					<td width="25%"><span id="pswi"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/cheeses/halloumi.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="2" value="0" class="slider" id="myhal" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Swiss <span id="swi"></span> </div>
+						</td>
+						<td width="25%"><span id="pswi"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/cheeses/halloumi.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="2" value="0" class="slider" id="myhal" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Halloumi <span id="hal"></span> </div>
-					</td>
-					<td width="25%"><span id="phal"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/cheeses/paneer.jpg" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="2" value="0" class="slider" id="mypan" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Halloumi <span id="hal"></span> </div>
+						</td>
+						<td width="25%"><span id="phal"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/cheeses/paneer.jpg" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="2" value="0" class="slider" id="mypan" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Paneer <span id="pan"></span> </div>
-					</td>
-					<td width="25%"><span id="ppan"></span></td>
-				</tr>
-			</table>
-			<button class="btnSub1" onclick="skipchee()">Skip</button><hr>
-		</div>
+						</td>
+						<td width="30%">
+							<div class="cen">Paneer <span id="pan"></span> </div>
+						</td>
+						<td width="25%"><span id="ppan"></span></td>
+					</tr>
+				</table>
+				<button class="btnSub1" onclick="skipchee()">Skip</button>
+				<hr>
+			</div>
 			<!-- Vegetable
 				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div id="vegeshow" style="display: none">
-			<h2 class="w">Vegetable</h2>
-			<table id="custom">
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myTomato" name="comment">
+			<div id="vegeshow" style="display: none">
+				<h2 class="w">Vegetable</h2>
+				<table id="custom">
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="3" value="0" class="slider" id="myTomato" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Tomato <span id="Tomato"></span> </div>
-					</td>
-					<td width="25%"><span id="ptom"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/lettuce.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myLettuce" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Tomato <span id="Tomato"></span> </div>
+						</td>
+						<td width="25%"><span id="ptom"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/lettuce.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="3" value="0" class="slider" id="myLettuce" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Lettuce <span id="Lettuce"></span> </div>
-					</td>
-					<td width="25%"><span id="plet"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/capsicum.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myCapsicum" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Lettuce <span id="Lettuce"></span> </div>
+						</td>
+						<td width="25%"><span id="plet"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/capsicum.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="3" value="0" class="slider" id="myCapsicum" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Capsicum <span id="Capsicum"></span> </div>
-					</td>
-					<td width="25%"><span id="pcap"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/onion.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myOnion" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Capsicum <span id="Capsicum"></span> </div>
+						</td>
+						<td width="25%"><span id="pcap"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/onion.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="3" value="0" class="slider" id="myOnion" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Onion <span id="Onion"></span> </div>
-					</td>
-					<td width="25%"><span id="poni"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/carrot.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myCarrot" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Onion <span id="Onion"></span> </div>
+						</td>
+						<td width="25%"><span id="poni"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/carrot.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="3" value="0" class="slider" id="myCarrot" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Carrot <span id="Carrot"></span> </div>
-					</td>
-					<td width="25%"><span id="pcar"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/extras/pineapple.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myPineapple" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Carrot <span id="Carrot"></span> </div>
+						</td>
+						<td width="25%"><span id="pcar"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/extras/pineapple.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="3" value="0" class="slider" id="myPineapple" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Pineapple <span id="Pineapple"></span> </div>
-					</td>
-					<td width="25%"><span id="ppin"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/extras/avocado.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myAvocado" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Pineapple <span id="Pineapple"></span> </div>
+						</td>
+						<td width="25%"><span id="ppin"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/extras/avocado.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="3" value="0" class="slider" id="myAvocado" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Avocado <span id="Avocado"></span> </div>
-					</td>
-					<td width="25%"><span id="pavo"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/extras/pineapple.png" class="icon"></div>
-					</td>
-					<td width="30%">
-						<div class="cen">
-							<div class="""slidecontainer">
-								<input type="range" min="0" max="3" value="0" class="slider" id="myPickles" name="comment">
+						</td>
+						<td width="30%">
+							<div class="cen">Avocado <span id="Avocado"></span> </div>
+						</td>
+						<td width="25%"><span id="pavo"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/extras/pineapple.png" class="icon"></div>
+						</td>
+						<td width="30%">
+							<div class="cen">
+								<div class="slidecontainer">
+									<input type="range" min="0" max="3" value="0" class="slider" id="myPickles" name="comment">
+								</div>
 							</div>
-						</div>
-					</td>
-					<td width="30%">
-						<div class="cen">Pickles <span id="Pickles"></span> </div>
-					</td>
-					<td width="25%"><span id="ppic"></span></td>
-				</tr>
-			</table>
-			<button class="btnSub1" onclick="skipvege()">Skip</button><hr>
-	</div>
+						</td>
+						<td width="30%">
+							<div class="cen">Pickles <span id="Pickles"></span> </div>
+						</td>
+						<td width="25%"><span id="ppic"></span></td>
+					</tr>
+				</table>
+				<button class="btnSub1" onclick="skipvege()">Skip</button>
+				<hr>
+			</div>
 			<!-- Sauce
 				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div id="sauceshow" style="display: none">
-			<h2 class="w">Sauce</h2>
-			<table id="custom">
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-					</td>
-					<td>
-						<div class="cenform">
-							<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Mayonnaise
-								<input type="checkbox" name="" value="" onclick="mayoT()" id="mayo">
-								<span class="checkmark"></span>
-							</label>
-						</div>
-					</td>
-					<td width="25%"><span id="pmayo"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-					</td>
-					<td>
-						<div class="cenform">
-							<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">
-								<p>Aioli</p>
-								<input type="checkbox" name="" value="" onclick="aioliT()" id="aioli">
-								<span class="checkmark"></span>
-							</label>
-						</div>
-					</td>
-					<td width="25%"><span id="paioli"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-					</td>
-					<td>
-						<div class="cenform">
-							<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Curry Sauce
-								<input type="checkbox" name="" value="" onclick="curryT()" id="curry">
-								<span class="checkmark"></span>
-							</label>
-						</div>
-					</td>
-					<td width="25%"><span id="pcurry"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-					</td>
-					<td>
-						<div class="cenform">
-							<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Italian Dressing
-								<input type="checkbox" name="" value="" onclick="itaT()" id="ita">
-								<span class="checkmark"></span>
-							</label>
-						</div>
-					</td>
-					<td width="25%"><span id="pita"></span></td>
-				</tr>
-				<tr id="Hov">
-					<td width="15%">
-						<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
-					</td>
-					<td>
-						<div class="cenform">
-							<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Hot Chilli
-								<input type="checkbox" name="" value="" onclick="hotcT()" id="hotc">
-								<span class="checkmark"></span>
-							</label>
-						</div>
-					</td>
-					<td width="25%"><span id="photc"></span></td>
-				</tr>
-				<hr>
-			</table>
-			<button class="btnSub1" onclick="skipsau()">No Sauce</button>
-		</div>
+			<div id="sauceshow" style="display: none">
+				<h2 class="w">Sauce</h2>
+				<table id="custom">
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+						</td>
+						<td>
+							<div class="cenform">
+								<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Mayonnaise
+									<input type="checkbox" name="" value="" onclick="mayoT()" id="mayo">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</td>
+						<td width="25%"><span id="pmayo"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+						</td>
+						<td>
+							<div class="cenform">
+								<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">
+									<p>Aioli</p>
+									<input type="checkbox" name="" value="" onclick="aioliT()" id="aioli">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</td>
+						<td width="25%"><span id="paioli"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+						</td>
+						<td>
+							<div class="cenform">
+								<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Curry Sauce
+									<input type="checkbox" name="" value="" onclick="curryT()" id="curry">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</td>
+						<td width="25%"><span id="pcurry"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+						</td>
+						<td>
+							<div class="cenform">
+								<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Italian Dressing
+									<input type="checkbox" name="" value="" onclick="itaT()" id="ita">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</td>
+						<td width="25%"><span id="pita"></span></td>
+					</tr>
+					<tr id="Hov">
+						<td width="15%">
+							<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+						</td>
+						<td>
+							<div class="cenform">
+								<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Hot Chilli
+									<input type="checkbox" name="" value="" onclick="hotcT()" id="hotc">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</td>
+						<td width="25%"><span id="photc"></span></td>
+					</tr>
+					<hr>
+				</table>
+				<button class="btnSub1" onclick="skipsau()">No Sauce</button>
+			</div>
 			<!-- <table id="custom">
 				<tr>
 					<td style="color:red">Total</td>
@@ -472,25 +477,28 @@
 			</table> -->
 			<br>
 			<div id="subhide" style="display: none;">
-			<table id="custom noHov">
-				<tr>
-					<td>
-						<div class="cen"><button class="btnSub" id="Order">Proceed with order</button></div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="cen"><button class="btnSub" id="Another">Order Another Burger</button></div>
-					</td>
-				</tr>
-			</table>
+				<table id="custom noHov">
+					<tr>
+						<td>
+							<div class="cen"><button class="btnSub" id="Order">Proceed with order</button></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="cen"><button class="btnSub" id="Another">Order Another Burger</button></div>
+							<input type="submit" class="btnSub" name="newburger" align="center" value="Proceed with order" style="width: 100%;
+							background-color: red; color: white;font-size: 2vw;padding: 14px 20px;margin: 8px 0; border-radius: 4px;cursor: pointer;"/>
+						</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>
 	</div>
 	</div>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- <script src='javascript/bootstrap.min.js'></script> -->
+	<script src='javascript/jquery.min.js'></script>
 	<script src="javascript/script.js"></script>
 </body>
 
